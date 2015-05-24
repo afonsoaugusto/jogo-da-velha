@@ -12,9 +12,9 @@ import java.util.Formatter;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import jogodavelhas.Campo;
-import jogodavelhas.Opcoes;
-import jogodavelhas.Regras;
+import estrutura.Campo;
+import estrutura.Opcoes;
+import estrutura.Regras;
 import util.Logger;
 
 /**

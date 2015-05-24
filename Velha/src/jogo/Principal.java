@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogodavelhas;
+package jogo;
 
 
+import estrutura.Regras;
+import estrutura.Campo;
 import javax.swing.JOptionPane;
 import jogadores.Jogador;
 import jogadores.Player;
@@ -17,10 +19,10 @@ import util.Midi;
  *
  * @author AFONSO
  */
-public class JogoDaVelhaS {
+public class Principal {
 
     private static Player player;
-    private static final Logger log = new util.Logger(JogoDaVelhaS.class);
+    private static final Logger log = new util.Logger(Principal.class);
 
     /**
      * @param args the command line arguments

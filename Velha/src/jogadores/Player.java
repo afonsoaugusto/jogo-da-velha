@@ -8,10 +8,10 @@ package jogadores;
 import java.net.Socket;
 import java.util.Formatter;
 import java.util.Scanner;
-import jogodavelhas.Campo;
-import jogodavelhas.Jogo;
-import jogodavelhas.Opcoes;
-import jogodavelhas.Regras;
+import estrutura.Campo;
+import jogo.Jogo;
+import estrutura.Opcoes;
+import estrutura.Regras;
 import util.Logger;
 
 /**

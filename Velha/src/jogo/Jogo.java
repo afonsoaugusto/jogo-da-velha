@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jogodavelhas;
+package jogo;
 
 
+import estrutura.Regras;
+import estrutura.Campo;
 import javax.swing.JOptionPane;
 import jogadores.Player;
 import util.Logger;

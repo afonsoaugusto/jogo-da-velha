@@ -5,6 +5,9 @@
  */
 package jogodavelhas;
 
+import estrutura.Opcoes;
+import estrutura.Regras;
+import estrutura.Campo;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.junit.Assert;
