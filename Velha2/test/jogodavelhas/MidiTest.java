@@ -3,8 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package util;
+package jogodavelhas;
 
+/*
+ DEVELOPING GAME IN JAVA 
+
+ Caracteristiques
+
+ Editeur : NEW RIDERS 
+ Auteur : BRACKEEN 
+ Parution : 09 2003 
+ Pages : 972 
+ Isbn : 1-59273-005-1 
+ Reliure : Paperback 
+ Disponibilite : Disponible a la librairie 
+ */
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,39 +31,37 @@ import javax.sound.midi.MidiUnavailableException;
 import javax.sound.midi.Sequence;
 import javax.sound.midi.Sequencer;
 
-public class Midi implements MetaEventListener {
-
-    private Midi() {
-    }
-
-    public static Midi getInstance() {
-        return new Midi();
-    }
+/**
+ * An example that plays a Midi sequence. First, the sequence is played once
+ * with track 1 turned off. Then the sequence is played once with track 1 turned
+ * on. Track 1 is the drum track in the example midi file.
+ */
+public class MidiTest implements MetaEventListener {
 
     // The drum track in the example Midi file
     private static final int DRUM_TRACK = 1;
 
+    public static void main(String[] args) {
+        new MidiTest().run();
+    }
+
     private MidiPlayer player;
 
     public void run() {
+
         player = new MidiPlayer();
+
         // load a sequence
-        Sequence sequence = player.getSequence("sound/MMX3_Zero-KM.mid");
+        Sequence sequence = player.getSequence("sound/PacMnaS1.mid");
 
         // play the sequence
         player.play(sequence, true);
-    }
-    
-    public void stop() {
-        player.stop();
-    }
-    
-    public void pause() {
-        player.setPaused(true);
-    }
-    
-    public void start() {
-        player.setPaused(false);
+
+        // turn off the drums
+        /*System.out.println("Playing (without drums)...");
+        Sequencer sequencer = player.getSequencer();
+        sequencer.setTrackMute(DRUM_TRACK, true);
+        sequencer.addMetaEventListener(this);*/
     }
 
     /**
@@ -83,7 +94,7 @@ class MidiPlayer implements MetaEventListener {
 
     // Midi meta event
     public static final int END_OF_TRACK_MESSAGE = 47;
-    private static final Logger log = new util.Logger(Midi.class);
+
     private Sequencer sequencer;
 
     private boolean loop;
@@ -98,7 +109,7 @@ class MidiPlayer implements MetaEventListener {
             sequencer = MidiSystem.getSequencer();
             sequencer.open();
             sequencer.addMetaEventListener(this);
-            sequencer.setLoopCount(sequencer.LOOP_CONTINUOUSLY);
+            //sequencer.setLoopCount(sequencer.LOOP_CONTINUOUSLY);
         } catch (MidiUnavailableException ex) {
             sequencer = null;
         }
@@ -111,7 +122,7 @@ class MidiPlayer implements MetaEventListener {
         try {
             return getSequence(new FileInputStream(filename));
         } catch (IOException ex) {
-            log.err(ex.getMessage());
+            ex.printStackTrace();
             return null;
         }
     }
@@ -127,9 +138,11 @@ class MidiPlayer implements MetaEventListener {
             Sequence s = MidiSystem.getSequence(is);
             is.close();
             return s;
-        } catch (InvalidMidiDataException | IOException ex) {
-            log.err(ex.getMessage());
-
+        } catch (InvalidMidiDataException ex) {
+            ex.printStackTrace();
+            return null;
+        } catch (IOException ex) {
+            ex.printStackTrace();
             return null;
         }
     }
@@ -145,7 +158,7 @@ class MidiPlayer implements MetaEventListener {
                 sequencer.start();
                 this.loop = loop;
             } catch (InvalidMidiDataException ex) {
-                log.err(ex.getMessage());
+                ex.printStackTrace();
             }
         }
     }

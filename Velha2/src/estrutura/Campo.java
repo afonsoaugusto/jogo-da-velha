@@ -12,7 +12,7 @@ package estrutura;
 public final class Campo {
 
     private final char[][] campo = new char[3][3];
-    private final String posicao_invalida = "PosiÃ§Ã£o invalida";
+    private final String posicao_invalida = "Posição invalida";
 
     public Campo() {
         limpaCampo();

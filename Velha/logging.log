@@ -1,0 +1,68 @@
+2015-05-23 00:36:36 INFO  JogoDaVelhaS:30 - Você é o servidor
+2015-05-23 00:36:51 INFO  JogoDaVelhaS:30 - Informe o ip do Servidor 
+2015-05-23 00:36:58 INFO  Jogador:30 - Jogador  Servidor#X  #   #   #
+2015-05-23 00:37:00 INFO  Servidor:30 - Servidor  Jogador#XO #   #   #
+2015-05-23 00:37:02 INFO  Jogador:30 - Jogador  Servidor#XO #X  #   #
+2015-05-23 00:37:06 INFO  Servidor:30 - Servidor  Jogador#XO #XO #   #
+2015-05-23 00:37:07 INFO  Jogador:30 - Jogador  Servidor#XO #XO #X  #
+2015-05-23 00:37:09 INFO  Jogo:30 - O ganhador é o X
+2015-05-23 00:37:10 INFO  Jogo:30 - O ganhador é o X
+2015-05-23 00:37:12 INFO  Servidor:30 - Servidor  Jogador# O #   #   #
+2015-05-23 00:37:14 INFO  Jogador:30 - Jogador  Servidor# O # X #   #
+2015-05-25 00:53:27 INFO  Principal:30 - Você é o servidor
+2015-05-25 00:53:53 INFO  Principal:30 - Informe o ip do Servidor 127.0.0.1
+2015-05-25 00:54:51 INFO  Jogador:30 - Jogador  Servidor#X  #   #   #
+2015-05-25 00:54:55 INFO  Servidor:30 - Servidor  Jogador#X  #O  #   #
+2015-05-25 00:54:57 INFO  Jogador:30 - Jogador  Servidor#X  #O  #X  #
+2015-05-25 00:54:59 INFO  Servidor:30 - Servidor  Jogador#X  #OO #X  #
+2015-05-25 00:55:00 INFO  Jogador:30 - Jogador  Servidor#X  #OOX#X  #
+2015-05-25 00:55:02 INFO  Servidor:30 - Servidor  Jogador#X O#OOX#X  #
+2015-05-25 00:55:04 INFO  Jogador:30 - Jogador  Servidor#X O#OOX#XX #
+2015-05-25 00:55:05 INFO  Servidor:30 - Servidor  Jogador#X O#OOX#XXO#
+2015-05-25 00:55:06 INFO  Jogador:30 - Jogador  Servidor#XXO#OOX#XXO#
+2015-05-25 00:55:08 INFO  Jogo:30 - Deu Velha
+2015-05-25 00:55:10 INFO  Jogo:30 - Deu Velha
+2015-05-25 00:55:12 INFO  Servidor:30 - Servidor  Jogador# O #   #   #
+2015-05-25 00:55:13 INFO  Jogador:30 - Jogador  Servidor# O #X  #   #
+2015-05-25 00:55:14 INFO  Servidor:30 - Servidor  Jogador# O #X  # O #
+2015-05-25 00:55:16 INFO  Jogador:30 - Jogador  Servidor# O #X  #XO #
+2015-05-25 00:55:17 INFO  Servidor:30 - Servidor  Jogador# O #XO #XO #
+2015-05-25 00:55:19 INFO  Jogo:30 - O ganhador é o O
+2015-05-25 00:55:24 INFO  Jogo:30 - O ganhador é o O
+2015-05-25 00:55:31 INFO  Jogador:30 - Jogador  Servidor#X  #   #   #
+2015-05-25 00:55:32 INFO  Servidor:30 - Servidor  Jogador#X  # O #   #
+2015-05-25 00:55:33 INFO  Jogador:30 - Jogador  Servidor#X  # O #X  #
+2015-05-25 00:55:35 INFO  Servidor:30 - Servidor  Jogador#X O# O #X  #
+2015-05-25 00:55:36 INFO  Jogador:30 - Jogador  Servidor#X O#XO #X  #
+2015-05-25 00:55:38 INFO  Jogo:30 - O ganhador é o X
+2015-05-25 00:55:39 INFO  Jogo:30 - O ganhador é o X
+2015-05-25 01:11:13 INFO  Principal:30 - Você é o servidor
+2015-05-25 01:13:30 INFO  Servidor:30 - Servidor  Jogador#X  #O  #   #
+2015-05-25 01:13:34 INFO  Servidor:30 - Servidor  Jogador#X  #OO #X  #
+2015-05-25 01:13:39 INFO  Servidor:30 - Servidor  Jogador#X X#OOO#X  #
+2015-05-25 01:13:46 INFO  Jogo:30 - O ganhador é o O
+2015-05-25 01:13:50 INFO  Servidor:30 - Servidor  Jogador#  X# O #   #
+2015-05-25 01:13:53 INFO  Servidor:30 - Servidor  Jogador#X X# O #  O#
+2015-05-25 01:13:57 INFO  Servidor:30 - Servidor  Jogador#X X# OO#X O#
+2015-05-25 01:14:00 INFO  Jogo:30 - O ganhador é o X
+2015-05-25 01:14:04 INFO  Servidor:30 - Servidor  Jogador#O  #   #   #
+2015-05-25 01:14:07 INFO  Servidor:30 - Servidor  Jogador#OXO#   #   #
+2015-05-25 01:14:10 INFO  Servidor:30 - Servidor  Jogador#OXO#XO #   #
+2015-05-25 01:14:13 INFO  Servidor:30 - Servidor  Jogador#OXO#XOX#O  #
+2015-05-25 01:14:19 INFO  Jogo:30 - O ganhador é o O
+2015-05-25 01:14:21 INFO  Servidor:30 - Servidor  Jogador#XO #   #   #
+2015-05-25 01:14:23 INFO  Servidor:30 - Servidor  Jogador#XOX#O  #   #
+2015-05-25 01:14:25 INFO  Servidor:30 - Servidor  Jogador#XOX#OXO#   #
+2015-05-25 01:14:29 INFO  Servidor:30 - Servidor  Jogador#XOX#OXO# XO#
+2015-05-25 01:14:33 INFO  Jogo:30 - O ganhador é o X
+2015-05-25 01:14:36 INFO  Servidor:30 - Servidor  Jogador#   #   #O  #
+2015-05-25 01:14:39 INFO  Servidor:30 - Servidor  Jogador#O  # X #O  #
+2015-05-25 01:14:42 INFO  Servidor:30 - Servidor  Jogador#O  #XXO#O  #
+2015-05-25 01:14:45 INFO  Servidor:30 - Servidor  Jogador#O X#XXO#O O#
+2015-05-25 01:14:49 INFO  Servidor:30 - Servidor  Jogador#OXX#XXO#OOO#
+2015-05-25 01:14:53 INFO  Jogo:30 - O ganhador é o O
+2015-05-25 01:15:10 INFO  Servidor:30 - Servidor  Jogador#X  # O #   #
+2015-05-25 01:15:12 INFO  Servidor:30 - Servidor  Jogador#X  #OO #X  #
+2015-05-25 01:15:15 INFO  Servidor:30 - Servidor  Jogador#XX #OO #XO #
+2015-05-25 01:15:20 INFO  Servidor:30 - Servidor  Jogador#XX #OOX#XOO#
+2015-05-25 01:15:23 INFO  Jogo:30 - O ganhador é o X

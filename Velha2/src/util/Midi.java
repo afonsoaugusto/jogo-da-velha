@@ -35,7 +35,7 @@ public class Midi implements MetaEventListener {
     public void run() {
         player = new MidiPlayer();
         // load a sequence
-        Sequence sequence = player.getSequence("sound/MMX3_Zero-KM.mid");
+        Sequence sequence = player.getSequence("sound/1beatit.mid");
 
         // play the sequence
         player.play(sequence, true);

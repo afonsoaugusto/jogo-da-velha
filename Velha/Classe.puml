@@ -1,0 +1,116 @@
+@startuml
+abstract class jogadores.Player
+annotation java.lang.Override
+annotation java.lang.SuppressWarnings
+class java.io.BufferedInputStream
+class java.io.FileInputStream
+class java.io.IOException
+class java.io.InputStream
+class java.io.InputStreamReader
+class java.net.ServerSocket
+class java.net.Socket
+class java.util.ArrayList
+class java.util.Date
+class java.util.Formatter
+class java.util.List
+class java.util.Scanner
+class java.util.concurrent.ExecutorService
+class java.util.concurrent.Executors
+class javax.sound.midi.Instrument
+class javax.sound.midi.InvalidMidiDataException
+class javax.sound.midi.MetaMessage
+class javax.sound.midi.MidiChannel
+class javax.sound.midi.MidiSystem
+class javax.sound.midi.MidiUnavailableException
+class javax.sound.midi.Sequence
+class javax.sound.midi.Sequencer
+class javax.sound.midi.Soundbank
+class javax.sound.midi.Synthesizer
+class javax.swing.JFrame
+class javax.swing.JOptionPane
+class jogadores.Jogador
+class jogadores.Servidor
+class jogodavelhas.Campo
+class jogodavelhas.Jogo
+class jogodavelhas.JogoDaVelhaS
+class jogodavelhas.Regras
+class jogodavelhas.Rodada
+class org.apache.log4j.PropertyConfigurator
+class util.Logger
+class util.Midi
+class util.SynthNote
+enum jogodavelhas.Opcoes
+interface java.lang.Runnable
+interface javax.sound.midi.MetaEventListener
+jogadores.Player ..> java.lang.Override
+jogadores.Player ..> java.net.Socket
+jogadores.Player ..> java.util.Formatter
+jogadores.Player ..> java.util.Scanner
+jogadores.Player ..> jogodavelhas.Campo
+jogadores.Player ..> jogodavelhas.Jogo
+jogadores.Player ..> jogodavelhas.Regras
+jogadores.Player ..> util.Logger
+jogadores.Player ..> jogodavelhas.Opcoes
+jogadores.Player --|> java.lang.Runnable
+jogadores.Jogador --|> jogadores.Player
+jogadores.Jogador ..> java.lang.Override
+jogadores.Jogador ..> java.io.IOException
+jogadores.Jogador ..> java.io.InputStreamReader
+jogadores.Jogador ..> java.net.Socket
+jogadores.Jogador ..> java.util.Formatter
+jogadores.Jogador ..> java.util.Scanner
+jogadores.Jogador ..> java.util.concurrent.ExecutorService
+jogadores.Jogador ..> java.util.concurrent.Executors
+jogadores.Jogador ..> jogodavelhas.Campo
+jogadores.Jogador ..> jogodavelhas.Regras
+jogadores.Jogador ..> util.Logger
+jogadores.Jogador ..> jogodavelhas.Opcoes
+jogadores.Servidor --|> jogadores.Player
+jogadores.Servidor ..> java.lang.Override
+jogadores.Servidor ..> java.io.IOException
+jogadores.Servidor ..> java.net.ServerSocket
+jogadores.Servidor ..> java.util.Formatter
+jogadores.Servidor ..> java.util.Scanner
+jogadores.Servidor ..> java.util.concurrent.ExecutorService
+jogadores.Servidor ..> java.util.concurrent.Executors
+jogadores.Servidor ..> jogodavelhas.Campo
+jogadores.Servidor ..> jogodavelhas.Regras
+jogadores.Servidor ..> util.Logger
+jogadores.Servidor ..> jogodavelhas.Opcoes
+jogodavelhas.Campo ..> java.lang.Override
+jogodavelhas.Jogo ..> jogadores.Player
+jogodavelhas.Jogo ..> java.lang.SuppressWarnings
+jogodavelhas.Jogo --|> javax.swing.JFrame
+jogodavelhas.Jogo ..> javax.swing.JOptionPane
+jogodavelhas.Jogo ..> util.Logger
+jogodavelhas.Jogo ..> util.SynthNote
+jogodavelhas.JogoDaVelhaS ..> jogadores.Player
+jogodavelhas.JogoDaVelhaS ..> javax.swing.JOptionPane
+jogodavelhas.JogoDaVelhaS ..> jogadores.Jogador
+jogodavelhas.JogoDaVelhaS ..> jogadores.Servidor
+jogodavelhas.JogoDaVelhaS ..> util.Logger
+jogodavelhas.JogoDaVelhaS ..> util.Midi
+jogodavelhas.Regras ..> java.util.ArrayList
+jogodavelhas.Regras ..> java.util.List
+jogodavelhas.Rodada ..> java.lang.Override
+jogodavelhas.Rodada ..> java.util.Date
+util.Logger ..> javax.swing.JOptionPane
+util.Logger ..> org.apache.log4j.PropertyConfigurator
+util.Midi ..> java.lang.Override
+util.Midi ..> java.io.BufferedInputStream
+util.Midi ..> java.io.FileInputStream
+util.Midi ..> java.io.IOException
+util.Midi ..> java.io.InputStream
+util.Midi ..> javax.sound.midi.InvalidMidiDataException
+util.Midi ..> javax.sound.midi.MetaMessage
+util.Midi ..> javax.sound.midi.MidiSystem
+util.Midi ..> javax.sound.midi.MidiUnavailableException
+util.Midi ..> javax.sound.midi.Sequence
+util.Midi ..> javax.sound.midi.Sequencer
+util.Midi --|> javax.sound.midi.MetaEventListener
+util.SynthNote ..> javax.sound.midi.Instrument
+util.SynthNote ..> javax.sound.midi.MidiChannel
+util.SynthNote ..> javax.sound.midi.MidiSystem
+util.SynthNote ..> javax.sound.midi.Soundbank
+util.SynthNote ..> javax.sound.midi.Synthesizer
+@enduml

@@ -28,12 +28,12 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+         //Midi.getInstance().run();
         Campo campo = new Campo();
         Regras regras = new Regras(campo);
         int showConfirmDialog = JOptionPane.showConfirmDialog(null, "Você é o servidor?", null, 1);
         if (showConfirmDialog == 0) {
             log.inf("Você é o servidor");
-            Midi.getInstance().run();
             player = new Servidor(campo,regras);
             startGame();
         } else if (showConfirmDialog == 1) {
