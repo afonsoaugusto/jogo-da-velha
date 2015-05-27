@@ -10,8 +10,8 @@ import estrutura.Regras;
 import estrutura.Campo;
 import javax.swing.JOptionPane;
 import jogadores.Player;
+import util.AudioInterface;
 import util.Logger;
-import util.SynthNote;
 
 /**
  *
@@ -23,7 +23,6 @@ public final class Jogo extends javax.swing.JFrame {
     private final Player player;
     private final Regras regras;
     private final Logger log;
-    private final SynthNote note;
 
     /**
      * Creates new form Janela
@@ -32,17 +31,16 @@ public final class Jogo extends javax.swing.JFrame {
      * @param player
      * @param regras
      */
-    public Jogo(Campo campo, Player player, Regras regras) {
+    public Jogo(Campo campo, Player player) {
         this.setResizable(false);
         this.log = new Logger(Jogo.class);
         initComponents();
         this.campo = campo;
         this.player = player;
-        this.regras = regras;
+        this.regras = new Regras(campo);
         atualizaLabelClass();
         atualizaCampo();
         this.regras.iniciaRodada();
-        this.note = new SynthNote();
     }
 
     /**
@@ -323,9 +321,9 @@ public final class Jogo extends javax.swing.JFrame {
             if (player.isVezAtual() && regras.isJogadaValida(i)) {
                 player.realizarJogada(i);
                 atualizaCampo();
-                this.note.nota(60);
+                AudioInterface.startAudioTeclaUp();
             }else{
-                this.note.nota(64);
+                AudioInterface.startAudioTeclaDown();
             }
         } catch (Exception ex) {
             log.errClient(ex);
@@ -343,6 +341,7 @@ public final class Jogo extends javax.swing.JFrame {
             regras.reiniciarJogo();
             regras.iniciaRodada();
             atualizaCampo();
+            isFimDeJogo();
         }
 
         if (regras.isVelha()) {
@@ -351,6 +350,7 @@ public final class Jogo extends javax.swing.JFrame {
             regras.reiniciarJogo();
             regras.iniciaRodada();
             atualizaCampo();
+            isFimDeJogo();
         }
     }
 
@@ -358,21 +358,12 @@ public final class Jogo extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, this.regras.verRodadas());
     }
 
-    private void analiseDoCampo() {
-        boolean velha = true;
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                try {
-                    if (String.valueOf(this.campo.getPosicao(i + j + 1)).equals(" ")
-                            || ' ' == this.campo.getPosicao(i + j + 1)) {
-                        velha = false;
-                    }
-                } catch (Exception ex) {
-                    log.errClient(ex);
-                }
-            }
+    private void isFimDeJogo() {
+        if (regras.isFimDeJogo()){
+            log.infClient("O Jogo Terminou");
+            verRodadas();
+            regras.reiniciarJogoCompleto();
         }
-        log.infClient(velha);
     }
 
 }

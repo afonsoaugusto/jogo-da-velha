@@ -22,8 +22,7 @@ public abstract class Player implements Runnable {
 
     private String ip;
     private Opcoes opcao;
-    protected final Campo campo;
-    protected final Regras regras;
+    protected final Campo campo; 
     protected boolean vezAtual;
     protected Jogo jogo;
     protected Scanner input;
@@ -31,16 +30,14 @@ public abstract class Player implements Runnable {
     protected Logger log;
     protected Socket connection;
 
-    public Player(Campo campo, Regras regras) {
+    public Player(Campo campo) {
         this.campo = campo;
-        this.regras = regras;
         log = new Logger(Player.class);
     }
 
-    public Player(String ip, Campo campo, Regras regras) {
+    public Player(String ip, Campo campo) {
         this.ip = ip;
         this.campo = campo;
-        this.regras = regras;
     }
 
     public boolean isVezAtual() {
@@ -78,7 +75,7 @@ public abstract class Player implements Runnable {
 
     protected void startInterface() {
         try {
-            jogo = new Jogo(campo, this, regras);
+            jogo = new Jogo(campo, this);
             jogo.setVisible(true);
         } catch (Exception ex) {
             log.err(ex);

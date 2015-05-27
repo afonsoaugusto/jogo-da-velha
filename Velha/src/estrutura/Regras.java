@@ -17,7 +17,7 @@ public class Regras {
     private final Campo campo;
     private final char[][] board;
     private char winner;
-    private final List<Rodada> rodadas;
+    private List<Rodada> rodadas;
     private Rodada rodadaAtual;
 
     public Regras(Campo campo) {
@@ -96,6 +96,11 @@ public class Regras {
     public void reiniciarJogo() {
         this.campo.limpaCampo();
     }
+    
+    public void reiniciarJogoCompleto() {
+        reiniciarJogo();
+        this.rodadas = new ArrayList<>();
+    }
 
     public void iniciaRodada() {
         this.rodadaAtual = new Rodada();
@@ -152,5 +157,9 @@ public class Regras {
             }
         }
         return isTerminada;
+    }
+    
+    public boolean isFimDeJogo(){
+        return (rodadas.size() >3 && isRodadasTerminadas());
     }
 }

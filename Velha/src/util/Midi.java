@@ -18,20 +18,17 @@ import javax.sound.midi.MidiUnavailableException;
 import javax.sound.midi.Sequence;
 import javax.sound.midi.Sequencer;
 
-public class Midi implements MetaEventListener {
+public class Midi implements MetaEventListener,Runnable {
 
-    private Midi() {
+    protected Midi() {
     }
-
-    public static Midi getInstance() {
-        return new Midi();
-    }
-
+    
     // The drum track in the example Midi file
     private static final int DRUM_TRACK = 1;
 
     private MidiPlayer player;
 
+    @Override
     public void run() {
         player = new MidiPlayer();
         // load a sequence

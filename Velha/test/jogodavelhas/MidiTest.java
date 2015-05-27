@@ -31,6 +31,6 @@ public class MidiTest {
     
 
     public static void main(String[] args) {
-        Midi.getInstance().run();
+       // Midi.getInstance().run();
     }
 }

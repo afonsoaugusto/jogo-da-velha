@@ -14,7 +14,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import estrutura.Campo;
 import estrutura.Opcoes;
-import estrutura.Regras;
 import util.Logger;
 
 /**
@@ -23,8 +22,8 @@ import util.Logger;
  */
 public class Jogador extends Player {
 
-    public Jogador(Campo jogo, Regras regras, String ipServidor) {
-        super(jogo, regras);
+    public Jogador(String ipServidor) {
+        super(new Campo());
         super.setOpcao(Opcoes.O);
         super.vezAtual = false;
         super.setIp(ipServidor);

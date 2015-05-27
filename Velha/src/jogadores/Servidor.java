@@ -13,7 +13,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import estrutura.Campo;
 import estrutura.Opcoes;
-import estrutura.Regras;
 import util.Logger;
 
 /**
@@ -24,8 +23,8 @@ public class Servidor extends Player {
 
     private ServerSocket server;
 
-    public Servidor(Campo jogo, Regras regras) {
-        super(jogo, regras);
+    public Servidor() {
+        super(new Campo());
         super.setOpcao(Opcoes.X);
         super.vezAtual = true;
         super.log = new Logger(Servidor.class);
