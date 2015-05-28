@@ -100,6 +100,7 @@ public class Regras {
     public void reiniciarJogoCompleto() {
         reiniciarJogo();
         this.rodadas = new ArrayList<>();
+        Rodada.id = 0;
     }
 
     public void iniciaRodada() {
@@ -160,6 +161,6 @@ public class Regras {
     }
     
     public boolean isFimDeJogo(){
-        return (rodadas.size() >3 && isRodadasTerminadas());
+        return (rodadas.size() ==3 && isRodadasTerminadas());
     }
 }

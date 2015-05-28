@@ -18,7 +18,7 @@ public class Rodada {
     private final Date data;
     private final Campo campo;
     private boolean isRodadaFinalizada;
-    private static int id = 0;
+    protected static int id = 0;
     private final int idRodada;
 
     public Rodada() {

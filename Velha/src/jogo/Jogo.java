@@ -314,6 +314,7 @@ public final class Jogo extends javax.swing.JFrame {
 
     private void atualizaLabelVezAtual() {
         jLVezAtual.setText(String.valueOf(player.isVezAtual() ? "É a sua vez" : "Vez do oponente"));
+        jLVezAtual.setText(player.getOpcao().name()+" - "+jLVezAtual.getText());
     }
 
     private void realizarJogada(int i) {
@@ -339,18 +340,18 @@ public final class Jogo extends javax.swing.JFrame {
             log.infClient("O ganhador é o " + regras.getWinner());
             regras.finalizarRodada();
             regras.reiniciarJogo();
+            isFimDeJogo();
             regras.iniciaRodada();
             atualizaCampo();
-            isFimDeJogo();
         }
 
         if (regras.isVelha()) {
             log.infClient("Deu Velha");
             regras.finalizarRodada();
             regras.reiniciarJogo();
+            isFimDeJogo();
             regras.iniciaRodada();
             atualizaCampo();
-            isFimDeJogo();
         }
     }
 
